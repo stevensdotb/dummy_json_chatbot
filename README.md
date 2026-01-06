@@ -1,4 +1,5 @@
 # DummyJSON AI Chatbox
+AI Agent Chatbox that give information about users through DummyJSON API
 
 ### Project Setup
 
@@ -29,7 +30,7 @@ pip install -r requirements.txt
 3. Add secrets for Streamlit
 Create a file at `.streamlit/secrets.toml` with your Ollama and other secrets.:
 ```toml
-OLLAMA_API = "<local-endpoint>              # For local
+OLLAMA_API = "<local-endpoint>"             # For local
 OLLAMA_HOST = "https://ollama.com"          # For cloud
 OLLAMA_API_KEY = "<ollama-api-key>"         # For cloud
 OLLAMA_MODEL = "<your-model>"
