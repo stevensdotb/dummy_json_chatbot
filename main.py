@@ -1,6 +1,4 @@
-def main():
-    print("Hello from dummy-json-chatbot!")
-
+from src.app import chat_ui
 
 if __name__ == "__main__":
-    main()
+    chat_ui()

@@ -6,10 +6,10 @@ def setup_logger() -> logging.Logger:
         encoding='utf-8',
         format='[%(asctime)s] (%(levelname)s): %(message)s',
         datefmt='%m-%d-%Y %I:%M:%S %p',
-        level=logging.DEBUG,
-        handlers=[
-            logging.StreamHandler()
-        ]
+        level=logging.INFO,
+        # handlers=[
+        #     logging.StreamHandler()
+        # ]
     )
     return logging.getLogger(__name__)
 

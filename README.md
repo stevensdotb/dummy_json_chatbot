@@ -1,6 +1,7 @@
 # DummyJSON AI Chatbox
 AI Agent Chatbox that give information about users through DummyJSON API
 <br>
+<br>
 <img style="display: block; margin: 0 auto;" title="DummyJSON AI Chatbox" alt="DummyJSON AI Chatbox" src="app_preview.png" width=300px>
 
 ### Project Setup

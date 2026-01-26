@@ -1,8 +1,8 @@
 import json
 import requests
 
-from logger import logger
-from settings import API_URL
+from src.logger import logger
+from src.settings import API_URL
 
 
 def search_users(field:str, value:str, return_fields:list = []) -> dict:
@@ -12,7 +12,7 @@ def search_users(field:str, value:str, return_fields:list = []) -> dict:
         value (str): Value that the field must match
         return_fields (list, optional): List of user fields to return in the response.
     Returns:
-        dict: The filtered user data or an error message.   
+        dict: The filtered user data or an error message.
     """
     if return_fields and isinstance(return_fields, str):
         return_fields = json.loads(return_fields)
@@ -35,7 +35,7 @@ def search_users(field:str, value:str, return_fields:list = []) -> dict:
 def count_users() -> dict:
     """Counts the total number of users in the internal database.
     Returns:
-        dict: The total user count or an error message.   
+        dict: The total user count or an error message.
     """
     endpoint = f"{API_URL}"
     logger.info(f"Endpoint: {endpoint}")
@@ -49,7 +49,7 @@ def count_users() -> dict:
 
     if isinstance(data, dict) and data.get("total"):
         return {"total": data["total"]}
-    
+
     return data
 
 
@@ -58,7 +58,7 @@ def get_user_posts(user_id: int) -> dict:
     Args:
         user_id (int): The ID of the user whose posts are to be retrieved.
     Returns:
-        dict: The user's posts or an error message.   
+        dict: The user's posts or an error message.
     """
     endpoint = f"{API_URL}/{user_id}/posts"
     logger.info(f"Endpoint: {endpoint}")
@@ -76,7 +76,7 @@ def get_user_todos(user_id: int) -> dict:
     Args:
         user_id (int): The ID of the user whose to-do items are to be retrieved.
     Returns:
-        dict: The user's to-do items or an error message.   
+        dict: The user's to-do items or an error message.
     """
     endpoint = f"{API_URL}/{user_id}/todos"
     logger.info(f"Endpoint: {endpoint}")

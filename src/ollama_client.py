@@ -1,6 +1,6 @@
 from ollama import Client
 
-from settings import OLLAMA_API_KEY, OLLAMA_HOST, OLLAMA_MODEL
+from src.settings import OLLAMA_API_KEY, OLLAMA_HOST, OLLAMA_MODEL
 
 
 client = Client(
